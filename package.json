@@ -1,0 +1,27 @@
+{
+  "name": "issues-this-week",
+  "version": "1.0.0",
+  "description": "create issues this week post from a lit of github issues.",
+  "main": "index.js",
+  "dependencies": {
+    "hapi": "^13.4.1",
+    "inert": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwainm/issues-this-week.git"
+  },
+  "keywords": [
+    "issues"
+  ],
+  "author": "dwainm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dwainm/issues-this-week/issues"
+  },
+  "homepage": "https://github.com/dwainm/issues-this-week#readme"
+}

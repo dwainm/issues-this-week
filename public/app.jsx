@@ -1,5 +1,3 @@
-var restDb = new Firebase("https://wcbookings-1253.firebaseio.com/");
-var issuesRef = restDb.child("issues");
 
 var IssuesApp = React.createClass({
 
@@ -8,8 +6,7 @@ var IssuesApp = React.createClass({
 		console.log('submitted');
 
 		 var usernameInput = document.querySelector('#issue-input');
-		 var issueList     = 
-		 usernameInput.value.split('\n');
+		 var issueList     = usernameInput.value.split('\n');
 		 //usernameInput.value = '';	
 		
 		 this.storeIssues();
@@ -21,16 +18,10 @@ var IssuesApp = React.createClass({
 		issueList.forEach( function(issueUrl, index ){
 
 			var today = new Date();
-			issue = { url: issueUrl, author: '', lables:'', created: today.toJSON  };
-			restDb.issuesRef(  )	
+			var issue = { url: issueUrl, author: '', lables:'', created: today.toJSON  };
+			//restDb.issuesRef(  )	
 
 		});
-issues
-- id
-- url
-- author
-- lables
-- date created
 		
 	},
 	
