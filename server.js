@@ -37,6 +37,16 @@ server.route({
     }
 });
 
+// handle submissions
+server.route({
+    method: 'POST',
+    path: '/issues',
+    handler: function(req, reply){ 
+        console.log( req.payload);
+        //console.log( request );
+    }
+});
+
 server.start((err) => {
 
     if (err) {
