@@ -3,7 +3,10 @@
 const Hapi = require('hapi');
 
 const server = new Hapi.Server();
-server.connection({ port: 3000 });
+server.connection({ 
+    host: "localhost",
+    port: 3000 
+});
 
 
 server.register(require('inert'), (err) => {
@@ -31,6 +34,14 @@ server.route({
 
 server.route({
     method: 'GET',
+    path: '/qwest.min.js',
+    handler: {
+        file: './public/qwest.min.js'
+    }
+});
+
+server.route({
+    method: 'GET',
     path: '/style.css',
     handler: {
         file: './public/style.css'
@@ -40,10 +51,15 @@ server.route({
 // handle submissions
 server.route({
     method: 'POST',
-    path: '/issues',
+    path: '/',
     handler: function(req, reply){ 
-        console.log( req.payload);
-        //console.log( request );
+        
+        console.log( req.payload );
+        return reply();
+        req.payload.issues.forEach(function(item, index){
+            console.log( item );
+        });
+        return reply();
     }
 });
 

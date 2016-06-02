@@ -14,7 +14,6 @@ report /report
 - status [ready, processing]
 - date created
 
-
 Report creation
 ------
 User Input list of issues
